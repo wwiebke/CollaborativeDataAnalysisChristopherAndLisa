@@ -8,5 +8,6 @@
 #Set working directory Christopher
 setwd("C:/Users/Christopher/OneDrive/Dokumente/Studium/Hertie School of Governance/Courses/Fall 2015/Collaborative Data Analysis/Project 1")
 
-#Load Internet Usage per Minute Data
+#Load Internet Usage per Minute Data and pass it into a dataframe
 data("WWWusage")
+WWWusage_dataframe <- data.frame(WWWusage)
