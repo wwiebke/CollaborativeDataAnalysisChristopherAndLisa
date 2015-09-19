@@ -4,7 +4,7 @@ This is the repository for the 'Collaborative Social Science Data Analysis' cour
 
 <p><b>Folder Structure of the repository</b></p>
 
-The course calls for four assignments. Each folder contains code and additional files for one assignemnts. Please find descriptions of the assignments in the respective folders.
+The course calls for four assignments, each with its own folder. Please find descriptions of the assignments in the respective folders.
 
 <p><b>Contact</b></p>
 
