@@ -2,6 +2,15 @@
 # R-File for Assignment 1 dealing with dataset 1 (WWWusage)
 ###########################
 
+# Copyright statement comes here
+# Author comment
+# File descritpion comment, including purpose of program, inputs and outputs
+
+
+# Formatted accirding to google style guide
+#Load libraries
+library(ggplot2)
+library(multiplot)
 #Find a full list of pre-installed datasets here
 #https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 
@@ -9,34 +18,48 @@
 setwd("C:/Users/Christopher/OneDrive/Dokumente/Studium/Hertie School of Governance/Courses/Fall 2015/Collaborative Data Analysis/Project 1")
 
 #Load Internet Usage per Minute Data and pass it into a dataframe
-data("WWWusage")
-WWWusage <- WWWusage #No need to load it into a dataset, only one varibale
-?WWWusage
+data("WWWusage")  # Load data
+?WWWusage  # Describe data
+data <- data.frame(WWWusage)  # Putting it into a data frame can't hurt
+
+#Adding time can't hurt either
+data$time <- c(1:100)
 
 #######################
 #Descirptive statistics
 #######################
 
 #Plot Internet usage
-plot(WWWusage, main="Number of users connected to the Internet 
-     through a sever every minute", 
-     lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
+plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
+  through a sever every minute", 
+  lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 
 #Look at specific parts of the time series which allows for rescaling
-WWWusage_first10 <- WWWusage[1:10]
-plot(WWWusage_first10, type="l", main="Difference in number of users connected to the Internet 
-     through a sever every minute", 
-     lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+WWWusage.first10 <- data$WWWusage[1:10]
+plot(WWWusage.first10, type="l", main="Difference in number of users connected to the Internet 
+  through a sever every minute", 
+  lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
 
 #Plot difference in interet usage
-WWWusage_diff <- diff(WWWusage) 
-plot(WWWusage_diff, main="Difference in number of users connected to the Internet 
-     through a sever every minute", 
-     lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+WWWusage.diff <- diff(data$WWWusage) 
+plot(type = "l", WWWusage.diff, main="Difference in number of users connected to the Internet 
+  through a sever every minute", 
+  lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
 
-#Take logs of time series and plot together with diff
-WWWusage_log <- log(WWWusage)
-plot(WWWusage_log, main="Difference in number of users connected to the Internet 
-     through a sever every minute", 
-     lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+#Take logs of time series and plot
+WWWusage.log <- log(data$WWWusage)
+plot(WWWusage.log, main="Difference in number of users connected to the Internet 
+  through a sever every minute", 
+  lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+
+#calculate mean and plot together with WWWusage, also let's try ggplot2
+WWWusage.mean <- NA  # Create vector to avoid mistakes
+WWWusage.mean[1:100] <- mean(data$WWWusage)  # Put mean of internet usage in there 100 times
+data <- cbind(data, WWWusage.mean)  # bind it to dataframe
+p <- ggplot() +
+  geom.line(data = data, aes(x = time, y = WWWusage)) +
+  geom.line(data = data, aes(x = time, y = WWWusage.mean))
+  
+print(p)
+  
 
