@@ -10,4 +10,33 @@ setwd("C:/Users/Christopher/OneDrive/Dokumente/Studium/Hertie School of Governan
 
 #Load Internet Usage per Minute Data and pass it into a dataframe
 data("WWWusage")
-WWWusage_dataframe <- data.frame(WWWusage)
+WWWusage <- WWWusage #No need to load it into a dataset, only one varibale
+?WWWusage
+
+#######################
+#Descirptive statistics
+#######################
+
+#Plot Internet usage
+plot(WWWusage, main="Number of users connected to the Internet 
+     through a sever every minute", 
+     lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
+
+#Look at specific parts of the time series which allows for rescaling
+WWWusage_first10 <- WWWusage[1:10]
+plot(WWWusage_first10, type="l", main="Difference in number of users connected to the Internet 
+     through a sever every minute", 
+     lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+
+#Plot difference in interet usage
+WWWusage_diff <- diff(WWWusage) 
+plot(WWWusage_diff, main="Difference in number of users connected to the Internet 
+     through a sever every minute", 
+     lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+
+#Take logs of time series and plot together with diff
+WWWusage_log <- log(WWWusage)
+plot(WWWusage_log, main="Difference in number of users connected to the Internet 
+     through a sever every minute", 
+     lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+
