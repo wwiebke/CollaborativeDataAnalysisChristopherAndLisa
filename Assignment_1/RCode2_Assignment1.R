@@ -6,7 +6,7 @@
 #https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 
 #Set working directory Christopher
-setwd("C:/Users/Christopher/OneDrive/Dokumente/Studium/Hertie School of Governance/Courses/Fall 2015/Collaborative Data Analysis/Project 1")
+setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
 
 #Load student hair and eyecolor data and pass it into a dataframe
 data("HairEyeColor")
