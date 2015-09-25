@@ -1,0 +1,13 @@
+---
+title: "Assignment 1"
+author: "Lisa Schmid"
+date: "September 25, 2015"
+output: word_document
+---
+
+
+
+
+
+
+
