@@ -29,13 +29,9 @@ data$time <- c(1:100)
 #######################
 
 #Plot Internet usage
-<<<<<<< HEAD
-p1 <- plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
-  through a sever every minute", 
-=======
+
 plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
   through a server every minute", 
->>>>>>> origin/master
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 
 #Look at specific parts of the time series which allows for rescaling
