@@ -1,0 +1,34 @@
+---
+title: "R-File 1 for Assignment 1"
+author: "Christopher"
+date: "25. September 2015"
+output: ioslides_presentation
+---
+
+```{r echo=FALSE, include=FALSE}
+setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/")
+source("RCode1_Assignment1.R")
+source("RCode2_Assignment1.R")
+```
+
+## Introduction
+
+This is an R Markdown presentation by Christopher. It presents the results from Analysis 1 for Assignemnt 1.
+
+The data used for the analysis is the WWWusage data.A time series of the numbers of users connected to the Internet through a server every minute.
+
+## Line Chart
+
+```{r echo=FALSE}
+plot(type ="l", WWWusage, main="Number of users connected to the Internet 
+  through a sever every minute", 
+  lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
+```
+
+## Slide with R Code and Output
+
+```{r}
+mean(WWWusage.first10)
+```
+
+## Slide with Plot

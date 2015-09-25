@@ -10,7 +10,6 @@
 # Formatted accirding to google style guide
 #Load libraries
 library(ggplot2)
-library(multiplot)
 #Find a full list of pre-installed datasets here
 #https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 
@@ -30,7 +29,7 @@ data$time <- c(1:100)
 #######################
 
 #Plot Internet usage
-plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
+p1 <- plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
   through a sever every minute", 
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 
@@ -56,14 +55,8 @@ plot(WWWusage.log, main="Difference in number of users connected to the Internet
 WWWusage.mean <- NA  # Create vector to avoid mistakes
 WWWusage.mean[1:100] <- mean(data$WWWusage)  # Put mean of internet usage in there 100 times
 data <- cbind(data, WWWusage.mean)  # bind it to dataframe
-p <- ggplot() +
-  geom.line(data = data, aes(x = time, y = WWWusage)) +
-  geom.line(data = data, aes(x = time, y = WWWusage.mean))
+#p <- ggplot() +
+#  geom.line(data = data, aes(x = time, y = WWWusage)) +
+#  geom.line(data = data, aes(x = time, y = WWWusage.mean))
   
-print(p)
-
-#########################################
-# Dynamic link to code 2
-#########################################
-
-source("RCode2_Assignment1.R")
+#print(p1)
