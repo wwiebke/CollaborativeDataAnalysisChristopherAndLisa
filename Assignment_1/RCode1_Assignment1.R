@@ -30,10 +30,11 @@ data$time <- c(1:100)
 
 #Plot Internet usage
 
-plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
+plot1 <- plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
   through a server every minute", 
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 
+plot1
 #Look at specific parts of the time series which allows for rescaling
 WWWusage.first10 <- data$WWWusage[1:10]
 plot(WWWusage.first10, type="l", main="Difference in number of users connected to the Internet 

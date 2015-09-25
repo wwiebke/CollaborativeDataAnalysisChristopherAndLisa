@@ -32,3 +32,15 @@ mean(WWWusage.first10)
 ```
 
 ## Slide with Plot
+
+
+## Dataset 1: Hair and Eye Color
+For the first assignment we want to analyze the preinstalled R dataset "*HairEyeColor*".
+Before getting started, we should set the working directory and load the data set.
+
+For exploring the dataset, we should familiarize ourselves with it. The data set has `r NCOL(HairEyeColor_dataframe)` variables and `r NROW(HairEyeColor_dataframe$Hair)` observations. It includes the following variables: `r print(1,)
+
+```{r, echo=FALSE}
+summary("HairEyeColor_dataframe")
+```
+
