@@ -1,4 +1,4 @@
-# Collaborative Social Science Data Analysis - repositry of Christopher and Lisa
+# Collaborative Social Science Data Analysis - repository of Christopher and Lisa
 
 This is the repository for the 'Collaborative Social Science Data Analysis' course taught by @christophergandrud at the Hertie School of Governance, set up by <a href="mailto:c.cosler@mpp.hertie-school.org">Christopher Cosler</a> and <a href="mailto:lisa.schmid@mpp.hertie-school.org">Lisa Schmid</a>.
 
