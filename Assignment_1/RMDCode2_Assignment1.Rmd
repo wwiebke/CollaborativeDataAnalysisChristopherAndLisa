@@ -1,0 +1,30 @@
+---
+title: "Assignment 1"
+author: "Lisa Schmid"
+date: "September 25, 2015"
+output: word_document
+---
+
+# Dataset 1: Hair and Eye Color
+For the first assignment we want to analyze the preinstalled R dataset "*HairEyeColor*".
+Before getting started, we should set the working directory and load the data set.
+
+```{r}
+# Setting the working directory
+setwd("C:/Users/Lisa/Documents/GitHub/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
+# Load student hair and eyecolor data and pass it into a dataframe
+data("HairEyeColor")
+HairEyeColor_dataframe <- data.frame(HairEyeColor)
+```
+
+For exploring the dataset, we should familiarize ourselves with it. The data set has `r NCOL(HairEyeColor_dataframe)` variables and `r NROW(HairEyeColor_dataframe$Hair)` observations. It includes the following variables: `r print(1,)
+
+```{r, echo=FALSE}
+summary("HairEyeColor_dataframe")
+```
+
+
+
+
+
+
