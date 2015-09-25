@@ -5,9 +5,6 @@
 #Find a full list of pre-installed datasets here
 #https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 
-#Set working directory Christopher
-setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
-
 #Load student hair and eyecolor data and pass it into a dataframe
 data("HairEyeColor")
 HairEyeColor_dataframe <- data.frame(HairEyeColor)

@@ -14,7 +14,6 @@ library(ggplot2)
 #https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 
 #Set working directory Christopher
-setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
 
 #Load Internet Usage per Minute Data and pass it into a dataframe
 data("WWWusage")  # Load data
