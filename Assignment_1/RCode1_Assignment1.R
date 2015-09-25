@@ -29,20 +29,25 @@ data$time <- c(1:100)
 #######################
 
 #Plot Internet usage
+<<<<<<< HEAD
 p1 <- plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
   through a sever every minute", 
+=======
+plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
+  through a server every minute", 
+>>>>>>> origin/master
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 
 #Look at specific parts of the time series which allows for rescaling
 WWWusage.first10 <- data$WWWusage[1:10]
 plot(WWWusage.first10, type="l", main="Difference in number of users connected to the Internet 
-  through a sever every minute", 
+  through a server every minute", 
   lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
 
-#Plot difference in interet usage
+#Plot difference in Interet usage
 WWWusage.diff <- diff(data$WWWusage) 
 plot(type = "l", WWWusage.diff, main="Difference in number of users connected to the Internet 
-  through a sever every minute", 
+  through a server every minute", 
   lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
 
 #Take logs of time series and plot
@@ -53,7 +58,7 @@ plot(WWWusage.log, main="Difference in number of users connected to the Internet
 
 #calculate mean and plot together with WWWusage, also let's try ggplot2
 WWWusage.mean <- NA  # Create vector to avoid mistakes
-WWWusage.mean[1:100] <- mean(data$WWWusage)  # Put mean of internet usage in there 100 times
+WWWusage.mean[1:100] <- mean(data$WWWusage)  # Put mean of Internet usage in there 100 times
 data <- cbind(data, WWWusage.mean)  # bind it to dataframe
 #p <- ggplot() +
 #  geom.line(data = data, aes(x = time, y = WWWusage)) +
