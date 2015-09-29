@@ -1,7 +1,7 @@
 ---
-title: "R-File 1 for Assignment 1"
-author: "Christopher"
-date: "25. September 2015"
+title: "Assignment 1"
+author: "Christopher and Lisa"
+date: "2. October 2015"
 output: ioslides_presentation
 ---
 
@@ -13,26 +13,49 @@ source("RCode2_Assignment1.R")
 
 ## Introduction
 
-This is an R Markdown presentation by Christopher. It presents the results from Analysis 1 for Assignemnt 1.
+This is an R Markdown presentation by Christopher and Lisa. It presents the results of the analyses run as part of Assignment 1.
 
-The data used for the analysis is the WWWusage data.A time series of the numbers of users connected to the Internet through a server every minute.
+The data used for the analysis is (1) the WWWusage data and (2) the Hair and Eye Color data. The first one is a time series of the numbers of users connected to the Internet through a server every minute. The second one is... 
+
+Let's start with the first one.
 
 ## Line Chart
-
-```{r echo=FALSE}
+This is a line chart of the time series data. The number of users is lowest (`r WWWusage.min`) in the beginning, increases at the 10th minute and has three spikes until it decreases again at minute 55. Another increase happens at minute 78, until the number of users reaches its peak, which is `r WWWusage.max` users.
+```{r echo=FALSE, error=FALSE}
 plot(type ="l", WWWusage, main="Number of users connected to the Internet 
   through a sever every minute", 
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 ```
 
-## Slide with R Code and Output
+## Mean
 
-```{r}
-mean(WWWusage.first10)
+The mean of the time series is `r mean(WWWusage)`. Let's plot this together with the time series.
+
+```{r echo = FALSE, error = FALSE} 
+plot(type ="l", WWWusage.mean, main="Number of users connected to the Internet 
+  through a sever every minute", 
+  lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
+lines(data$time, data$WWWusage, col="green")
 ```
 
-## Slide with Plot
+## Log
 
+Now let's plot the difference in log of the time series to get the percentage change. The time series now seems to be very close to stationary data.
+
+```{r echo = FALSE, error = FALSE} 
+plot(type = "l", WWWusage.log.diff, main="Difference in number of users connected to the Internet 
+     through a server every minute", 
+     lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+```
+
+## Rescaling
+
+Plot specific parts of the time series which allows for rescaling, in this case the first 10 observations
+```{r echo = FALSE, error = FALSE}
+plot(WWWusage[1:10], type="l", main="Number of users connected to the Internet 
+  through a server every minute, first 10 observations", 
+  lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
+```
 
 ## Dataset 1: Hair and Eye Color
 For the first assignment we want to analyze the preinstalled R dataset "*HairEyeColor*".
