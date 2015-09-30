@@ -8,4 +8,16 @@
 
 #Load student hair and eyecolor data and pass it into a dataframe
 data("HairEyeColor")
-HairEyeColor_dataframe <- data.frame(HairEyeColor)
+HairEyeColorData <- data.frame(HairEyeColor)
+
+###########
+# Descriptive statistics
+###########
+x <- apply(HairEyeColor, c(1, 2), sum)
+x
+sum(x)
+
+# Mosaique Plot
+fill_colors <- colors()[c(56,130,146,230)]
+mosaicplot(x, main = "Relationship between hair and eye color", 
+           color=fill_colors)

@@ -6,7 +6,15 @@
 # Formatted according to Google style guide
 ###########
 
-#Load libraries
+#Load/install necessary package
+packages <- c("ggplot2")
+for (p in packages) {
+  if (p %in% installed.packages()[,1]) require(p, character.only=T)
+  else {
+    install.packages(p)
+    require(p, character.only=T)
+  }
+}
 library(ggplot2)
 
 #Load Internet Usage per Minute Data and pass it into a dataframe

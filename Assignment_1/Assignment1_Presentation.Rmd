@@ -60,12 +60,23 @@ plot(WWWusage[1:10], type="l", main="Number of users connected to the Internet
   lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
 ```
 
-## HairEyeColor: Variables and Number of Observations
+## HairEyeColor: Descriptives
 Our second data set is the preinstalled "*HairEyeColor*" data.
 
-For exploring the dataset, we should familiarize ourselves with the variables. The data set has `r NCOL(HairEyeColor_dataframe)` variables and `r NROW(HairEyeColor_dataframe$Hair)` observations. It includes the following variables:
+The data set includes the variables "Hair, "Eye", "Sex" and "Freq". It has `r NCOL(HairEyeColorData)` variables and `r NROW(HairEyeColorData$Hair)` observations, although the sum of individuals included in the data set is `r sum(x)`.
 
-```{r, echo=FALSE}
-summary("HairEyeColor_dataframe")
+After summing up all individuals with the same eye and hair color, we get the following distribution:
+
+```{r echo = FALSE, error = FALSE}
+print(x)
 ```
 
+## HairEyeColor: Visualization
+
+In order to check for a relationship between hair and eye color, we can look at a mosaicplot of the data.
+
+```{r echo = FALSE, error = FALSE}
+fill_colors <- colors()[c(56,130,146,230)]
+mosaicplot(x, main = "Relationship between hair and eye color", 
+           color=fill_colors)
+```
