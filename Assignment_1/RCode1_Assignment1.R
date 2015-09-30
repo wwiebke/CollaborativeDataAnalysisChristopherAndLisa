@@ -20,7 +20,7 @@ data$time <- c(1:100)
 # Descirptive statistics
 ###########
 
-# Plot Internet usage, give titel and label axis appropriatly
+# Plot Internet usage, give title and label axis appropriatly
 plot(type ="l", data$time, data$WWWusage, main="Number of users connected to the Internet 
   through a server every minute", 
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
