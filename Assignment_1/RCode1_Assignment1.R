@@ -17,7 +17,7 @@ data <- data.frame(WWWusage)
 data$time <- c(1:100)
 
 ###########
-# Descirptive statistics
+# Descriptive statistics
 ###########
 
 # Plot Internet usage, give titel and label axis appropriatly
