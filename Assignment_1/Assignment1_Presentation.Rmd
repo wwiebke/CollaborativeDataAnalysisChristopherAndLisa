@@ -6,7 +6,8 @@ output: ioslides_presentation
 ---
 
 ```{r echo=FALSE, include=FALSE}
-setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/")
+# setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/")
+setwd("C:/Users/Lisa/Documents/GitHub/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
 source("RCode1_Assignment1.R")
 source("RCode2_Assignment1.R")
 ```
@@ -15,30 +16,30 @@ source("RCode2_Assignment1.R")
 
 This is an R Markdown presentation by Christopher and Lisa. It presents the results of the analyses run as part of Assignment 1.
 
-The data used for the analysis is (1) the WWWusage data and (2) the Hair and Eye Color data. The first one is a time series of the numbers of users connected to the Internet through a server every minute. The second one is... 
+The data used for the analysis is (1) the preinstalled "*WWWusage*" and (2) the "*HairEyeColor*" data. The first one is a time series of the numbers of users connected to the Internet through a server every minute. The second one is describing the hair and eye color as well as sex of 592 statistics students. 
 
 Let's start with the first one.
 
-## Line Chart
+## WWWusage: Line Chart
 This is a line chart of the time series data. The number of users is lowest (`r WWWusage.min`) in the beginning, increases at the 10th minute and has three spikes until it decreases again at minute 55. Another increase happens at minute 78, until the number of users reaches its peak, which is `r WWWusage.max` users.
 ```{r echo=FALSE, error=FALSE}
 plot(type ="l", WWWusage, main="Number of users connected to the Internet 
-  through a sever every minute", 
+  through a server every minute", 
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 ```
 
-## Mean
+## WWWusage: Mean
 
 The mean of the time series is `r mean(WWWusage)`. Let's plot this together with the time series.
 
 ```{r echo = FALSE, error = FALSE} 
 plot(type ="l", WWWusage.mean, main="Number of users connected to the Internet 
-  through a sever every minute", 
+  through a server every minute", 
   lwd=2, col="blue", ylab="Number of users",xlab="Time in minutes")
 lines(data$time, data$WWWusage, col="green")
 ```
 
-## Log
+## WWWusage: Log
 
 Now let's plot the difference in log of the time series to get the percentage change. The time series now seems to be very close to stationary data.
 
@@ -48,20 +49,19 @@ plot(type = "l", WWWusage.log.diff, main="Difference in number of users connecte
      lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
 ```
 
-## Rescaling
+## WWWusage: Rescaling
 
-Plot specific parts of the time series which allows for rescaling, in this case the first 10 observations
+Now we plot specific parts of the time series which allows for rescaling, in this case the first 10 observations
 ```{r echo = FALSE, error = FALSE}
 plot(WWWusage[1:10], type="l", main="Number of users connected to the Internet 
   through a server every minute, first 10 observations", 
   lwd=2, col="blue", ylab="Difference",xlab="Time in minutes")
 ```
 
-## Dataset 1: Hair and Eye Color
-For the first assignment we want to analyze the preinstalled R dataset "*HairEyeColor*".
-Before getting started, we should set the working directory and load the data set.
+## HairEyeColor: Variables and Number of Observations
+Our second data set is the preinstalled "*HairEyeColor*" data.
 
-For exploring the dataset, we should familiarize ourselves with it. The data set has `r NCOL(HairEyeColor_dataframe)` variables and `r NROW(HairEyeColor_dataframe$Hair)` observations. It includes the following variables: `r print(1,)
+For exploring the dataset, we should familiarize ourselves with the variables. The data set has `r NCOL(HairEyeColor_dataframe)` variables and `r NROW(HairEyeColor_dataframe$Hair)` observations. It includes the following variables:
 
 ```{r, echo=FALSE}
 summary("HairEyeColor_dataframe")

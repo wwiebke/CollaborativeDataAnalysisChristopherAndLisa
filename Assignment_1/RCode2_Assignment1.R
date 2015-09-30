@@ -1,9 +1,10 @@
-###########################
-# R-File for Assignment 1 dealing with dataset 1 (Hair and Eye Color)
-###########################
-
-#Find a full list of pre-installed datasets here
-#https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
+############
+# R-File 1 for Assignment 1 analyzing dataset 2 (HairEyeColor)
+# Christopher Cosler and Lisa Schmid
+# Updated September 30, 2015
+# The results are used and described in the presentation slides of Assignment 1
+# Formatted according to Google style guide
+###########
 
 #Load student hair and eyecolor data and pass it into a dataframe
 data("HairEyeColor")

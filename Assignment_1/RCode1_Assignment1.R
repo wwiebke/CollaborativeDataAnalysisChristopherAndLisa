@@ -1,7 +1,7 @@
 ############
-# R-File 1 for Assignment 1 dealing with dataset 1 (WWWusage)
-# Christopher Cosler and Lisa Schmit
-# Updated 29. September 2014
+# R-File 1 for Assignment 1 analyzing dataset 1 (WWWusage)
+# Christopher Cosler and Lisa Schmid
+# Updated September 30, 2015
 # The results are used and described in the presentation slides of Assignment 1
 # Formatted according to Google style guide
 ###########
