@@ -2,12 +2,14 @@
 title: "Assignment 1"
 author: "Christopher and Lisa"
 date: "2. October 2015"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    logo: logo.png
 ---
 
 ```{r echo=FALSE, include=FALSE}
-# setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/")
-setwd("C:/Users/Lisa/Documents/GitHub/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
+setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/")
+#setwd("C:/Users/Lisa/Documents/GitHub/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
 source("RCode1_Assignment1.R")
 source("RCode2_Assignment1.R")
 ```
