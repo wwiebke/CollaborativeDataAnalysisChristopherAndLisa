@@ -16,7 +16,7 @@ source("RCode2_Assignment1.R")
 
 This is an R Markdown presentation by Christopher and Lisa. It presents the results of the analyses run as part of Assignment 1.
 
-The data used for the analysis is (1) the preinstalled "*WWWusage*" and (2) the "*HairEyeColor*" data. The first one is a time series of the numbers of users connected to the Internet through a server every minute. The second one is describing the hair and eye color as well as sex of 592 statistics students. 
+The data used for the analysis is (1) the preinstalled "*WWWusage*" and (2) the "*HairEyeColor*" data. The first one is a time series of the numbers of users connected to the Internet through a server every minute. The second one is a cross-sectional data set describing the hair and eye color as well as sex of 592 statistics students. 
 
 Let's start with the first one.
 
