@@ -9,7 +9,7 @@ output:
 
 ```{r echo=FALSE, include=FALSE}
 # setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/")
-setwd("C:/Users/Lisa/Documents/GitHub/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1")
+try(setwd("C:/Users/Lisa/Documents/GitHub/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1"),silent=TRUE)
 source("RCode1_Assignment1.R")
 source("RCode2_Assignment1.R")
 ```
@@ -77,6 +77,8 @@ In order to check for a relationship between hair and eye color, we can look at 
 
 ```{r echo = FALSE, error = FALSE}
 fill_colors <- colors()[c(56,130,146,230)]
-mosaicplot(x, main = "Relationship between hair and eye color", 
+fill_colors[4] <- "#6ca580"
+y <- x[c(3,1,2,4),]
+mosaicplot(y, main = "Relationship between hair and eye color", 
            color=fill_colors)
 ```
