@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r echo=FALSE, include=FALSE}
-# setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/")
+try(setwd("C:/Users/Christopher/Google Drive/Collaborative Data Analysis/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1/"), silent = TRUE)
 try(setwd("C:/Users/Lisa/Documents/GitHub/CollaborativeDataAnalysisChristopherAndLisa/Assignment_1"),silent=TRUE)
 source("RCode1_Assignment1.R")
 source("RCode2_Assignment1.R")
