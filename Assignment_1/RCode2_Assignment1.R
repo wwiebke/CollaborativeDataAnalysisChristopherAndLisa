@@ -21,3 +21,12 @@ sum(x)
 fill_colors <- colors()[c(56,130,146,230)]
 mosaicplot(x, main = "Relationship between hair and eye color", 
            color=fill_colors)
+
+
+
+#############################################
+# Citation of Software:
+
+# R Core Team (2015). R: A language and environment for
+# statistical computing. R Foundation for Statistical Computing,
+# Vienna, Austria. URL https://www.R-project.org/.
